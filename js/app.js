@@ -1,4 +1,4 @@
-const translationsUrl = "data/translations.json";
+const translationsUrl = new URL("data/translations.json", document.baseURI).href;
 
 function applyLanguage(lang, translations) {
   const dict = translations[lang] || translations.ml;
