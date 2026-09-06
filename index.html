@@ -120,28 +120,28 @@
     .lang-toggle {
       display: inline-flex;
       align-items: center;
-      background: var(--beige-2);
-      border: 1px solid var(--line);
-      border-radius: 100px;
-      padding: 3px;
-      gap: 2px;
+      gap: 4px;
+      background: transparent;
+      border: none;
+      padding: 0;
     }
 
     .lang-btn {
       border: 0;
       background: transparent;
       cursor: pointer;
-      min-height: 32px;
-      padding: 0 13px;
-      border-radius: 100px;
-      font-size: 12px;
-      font-weight: 800;
+      padding: 2px 4px;
+      font-size: 11px;
+      font-weight: 500;
       color: var(--muted);
+      opacity: 0.6;
     }
 
     .lang-btn[aria-pressed="true"] {
-      background: var(--sage);
-      color: var(--card);
+      background: transparent;
+      color: var(--ink);
+      font-weight: 700;
+      opacity: 1;
     }
 
     .header-cta {
@@ -368,12 +368,20 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
     }
 
     .step-num {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       background: var(--sage);
       color: var(--card);
@@ -381,12 +389,12 @@
       place-items: center;
       font-size: 12px;
       font-weight: 800;
-      margin-bottom: 12px;
+      flex-shrink: 0;
     }
 
     .step h3 {
       font-size: 15px;
-      margin-bottom: 5px;
+      margin-bottom: 0;
     }
 
     .step p {
@@ -411,21 +419,11 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
       margin-top: 28px;
+      text-align: center;
     }
 
     .safety-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-
-    .safety-item .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--sage);
-      margin-top: 8px;
-      flex-shrink: 0;
+      display: block;
     }
 
     .safety-item strong {
@@ -567,8 +565,12 @@
     }
 
     @media (max-width: 560px) {
+      .container {
+        width: min(calc(100% - 48px), var(--max));
+      }
+
       .nav {
-        justify-content: center;
+        justify-content: space-between;
       }
 
       .brand {
@@ -657,10 +659,9 @@
         <div class="nav-right">
           <div class="lang-toggle" role="group" aria-label="Language">
             <button type="button" class="lang-btn" data-lang="ml" aria-pressed="true">ML</button>
+            <span style="font-size: 11px; color: var(--muted); opacity: 0.4;">|</span>
             <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
           </div>
-
-          <a class="header-cta" href="#join" data-i18n="header_cta">രജിസ്ട്രിയിൽ ചേരുക</a>
         </div>
       </nav>
     </div>
@@ -737,23 +738,31 @@
 
         <div class="steps">
           <div class="step">
-            <div class="step-num">1</div>
-            <h3 data-i18n="step1_h3">രജിസ്റ്റർ ചെയ്യുക</h3>
+            <div class="step-header">
+              <div class="step-num">1</div>
+              <h3 data-i18n="step1_h3">രജിസ്റ്റർ ചെയ്യുക</h3>
+            </div>
             <p data-i18n="step1_p">നിയമപരമായ ഒരു രജിസ്ട്രിയിൽ ചേരുക.</p>
           </div>
           <div class="step">
-            <div class="step-num">2</div>
-            <h3 data-i18n="step2_h3">ടിഷ്യൂ ടെസ്റ്റ്</h3>
+            <div class="step-header">
+              <div class="step-num">2</div>
+              <h3 data-i18n="step2_h3">ടിഷ്യൂ ടെസ്റ്റ്</h3>
+            </div>
             <p data-i18n="step2_p">നിങ്ങളുടെ HLA തരം പരിശോധിക്കുന്നു.</p>
           </div>
           <div class="step">
-            <div class="step-num">3</div>
-            <h3 data-i18n="step3_h3">സാധ്യതയുള്ള പൊരുത്തം</h3>
+            <div class="step-header">
+              <div class="step-num">3</div>
+              <h3 data-i18n="step3_h3">സാധ്യതയുള്ള പൊരുത്തം</h3>
+            </div>
             <p data-i18n="step3_p">പൊരുത്തമായാൽ നിങ്ങളെ ബന്ധപ്പെടും.</p>
           </div>
           <div class="step">
-            <div class="step-num">4</div>
-            <h3 data-i18n="step4_h3">ദാനം ചെയ്യുക</h3>
+            <div class="step-header">
+              <div class="step-num">4</div>
+              <h3 data-i18n="step4_h3">ദാനം ചെയ്യുക</h3>
+            </div>
             <p data-i18n="step4_p">ആരോഗ്യ പരിശോധനയ്ക്ക് ശേഷം ദാനം നടക്കുന്നു.</p>
           </div>
         </div>
@@ -768,25 +777,16 @@
 
         <div class="safety-list">
           <div class="safety-item">
-            <span class="dot"></span>
-            <div>
-              <strong data-i18n="safety1_title">പരിശോധിക്കപ്പെട്ടത്</strong>
-              <span data-i18n="safety1_desc">ആരോഗ്യ പരിശോധനയും വിലയിരുത്തലും നടത്തുന്നു.</span>
-            </div>
+            <strong data-i18n="safety1_title">പരിശോധിക്കപ്പെട്ടത്</strong>
+            <span data-i18n="safety1_desc">ആരോഗ്യ പരിശോധനയും വിലയിരുത്തലും നടത്തുന്നു.</span>
           </div>
           <div class="safety-item">
-            <span class="dot"></span>
-            <div>
-              <strong data-i18n="safety2_title">പിന്തുണ</strong>
-              <span data-i18n="safety2_desc">വിദഗ്ധർ പ്രക്രിയയിലുടനീളം നയിക്കുന്നു.</span>
-            </div>
+            <strong data-i18n="safety2_title">പിന്തുണ</strong>
+            <span data-i18n="safety2_desc">വിദഗ്ധർ പ്രക്രിയയിലുടനീളം നയിക്കുന്നു.</span>
           </div>
           <div class="safety-item">
-            <span class="dot"></span>
-            <div>
-              <strong data-i18n="safety3_title">പൊതുവെ സുരക്ഷിതം</strong>
-              <span data-i18n="safety3_desc">പൂർണ്ണമായും അപകടരഹിതമല്ലെങ്കിലും പൊതുവെ സുരക്ഷിതം.</span>
-            </div>
+            <strong data-i18n="safety3_title">പൊതുവെ സുരക്ഷിതം</strong>
+            <span data-i18n="safety3_desc">പൂർണ്ണമായും അപകടരഹിതമല്ലെങ്കിലും പൊതുവെ സുരക്ഷിതം.</span>
           </div>
         </div>
 
