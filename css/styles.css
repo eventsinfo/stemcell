@@ -381,6 +381,67 @@ h2 {
   width: 34px;
 }
 
+/* STEM CELLS BIOLOGICAL EXPLAINER */
+.stemcell-explainer-card {
+  max-width: 920px;
+  margin: 32px auto 26px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.explainer-media {
+  background: #fdfaf6;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.explainer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.explainer-content {
+  padding: 32px 28px;
+}
+
+.explainer-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--sage-light);
+  color: var(--sage);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.explainer-content h3 {
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+  color: var(--ink);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.explainer-content p {
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -475,6 +536,136 @@ h2 {
 
 .step h3 {
   font-size: 15px;
+}
+
+/* PROCEDURE VISUAL GUIDE */
+.procedure-guide {
+  margin-top: 50px;
+  padding-top: 44px;
+  border-top: 1px solid var(--line);
+}
+
+.procedure-header {
+  margin-bottom: 30px;
+}
+
+.procedure-header h3 {
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  color: var(--ink);
+  margin-top: 6px;
+}
+
+.procedure-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.procedure-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.procedure-media {
+  position: relative;
+  background: #fdfaf6;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.procedure-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.procedure-card:hover .procedure-img {
+  transform: scale(1.02);
+}
+
+.procedure-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  color: var(--sage);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.procedure-badge-donation {
+  color: var(--clay);
+}
+
+.procedure-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.procedure-body h4 {
+  font-size: 16.5px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.procedure-body p {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.procedure-checklist {
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.procedure-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 12.5px;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.check-icon {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--sage-light);
+  color: var(--sage);
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 /* DONOR REGISTRATION DRIVE */
@@ -940,6 +1131,11 @@ footer {
   .drive-meta-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .stemcell-explainer-card,
+  .procedure-cards {
+    grid-template-columns: 1fr;
   }
 
   .drive-perks,
