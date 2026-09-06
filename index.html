@@ -100,6 +100,29 @@
             <circle cx="39" cy="27" r="3" fill="currentColor" />
             <circle cx="31" cy="40" r="5" fill="currentColor" />
           </symbol>
+          <symbol id="icon-calendar" viewBox="0 0 64 64">
+            <rect x="10" y="14" width="44" height="42" rx="8" fill="none" stroke="currentColor" stroke-width="4" />
+            <line x1="10" y1="26" x2="54" y2="26" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <line x1="22" y1="8" x2="22" y2="18" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <line x1="42" y1="8" x2="42" y2="18" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <circle cx="23" cy="36" r="3" fill="currentColor" />
+            <circle cx="32" cy="36" r="3" fill="currentColor" />
+            <circle cx="41" cy="36" r="3" fill="currentColor" />
+            <circle cx="23" cy="46" r="3" fill="currentColor" />
+            <circle cx="32" cy="46" r="3" fill="currentColor" />
+            <circle cx="41" cy="46" r="3" fill="currentColor" />
+          </symbol>
+          <symbol id="icon-location" viewBox="0 0 64 64">
+            <path d="M32 8c-9.9 0-18 8.1-18 18 0 13.5 18 30 18 30s18-16.5 18-30c0-9.9-8.1-18-18-18Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" />
+            <circle cx="32" cy="26" r="6" fill="currentColor" />
+          </symbol>
+          <symbol id="icon-clock" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="4" />
+            <polyline points="32 18 32 32 42 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          </symbol>
+          <symbol id="icon-phone" viewBox="0 0 64 64">
+            <path d="M19 12c-2.2 0-4.3 1.2-5.4 3.1-4.8 8.4-1.2 24.2 12.5 37.9C39.8 66.7 55.6 70.3 64 65.5c1.9-1.1 3.1-3.2 3.1-5.4v-7.1c0-2.8-2-5.1-4.7-5.5l-8.6-1.4c-2.4-.4-4.8.8-5.9 3l-2.1 4.2c-7.6-3.8-13.8-10-17.6-17.6l4.2-2.1c2.2-1.1 3.4-3.5 3-5.9L34 16.7c-.4-2.7-2.7-4.7-5.5-4.7H19Z" transform="scale(0.8) translate(8, 6)" fill="currentColor" />
+          </symbol>
         </defs>
       </svg>
 
@@ -113,6 +136,7 @@
             </a>
 
             <div class="nav-right">
+              <a href="#drive" class="nav-drive-link" data-i18n="nav_drive">രജിസ്ട്രേഷൻ ഡ്രൈവ്</a>
               <div class="lang-toggle" role="group" aria-label="Language">
                 <button
                   type="button"
@@ -237,6 +261,130 @@
                   <h3 data-i18n="step4_h3"></h3>
                 </div>
                 <p data-i18n="step4_p"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DONOR REGISTRATION DRIVE -->
+        <section class="section drive-section" id="drive">
+          <div class="container center">
+            <div class="drive-badge-wrap">
+              <span class="drive-badge" data-i18n="drive_badge">ഒരു മിനുട്ട് മതി • ഒരു ജീവൻ രക്ഷിക്കാം</span>
+            </div>
+            <div class="eyebrow" data-i18n="drive_label">മെഗാ സ്റ്റെം സെൽ ഡോണർ രജിസ്ട്രേഷൻ ക്യാമ്പ്</div>
+            <h2 data-i18n="drive_h2">റാഫിയ ഷെറിന് ഒരു കൈത്താങ്ങാകാം; ഒരു ജീവൻ തിരിച്ചുപിടിക്കാം.</h2>
+            <p class="intro" data-i18n="drive_intro"></p>
+
+            <!-- PATIENT APPEAL STORY CARD -->
+            <div class="drive-appeal-card">
+              <div class="drive-appeal-header">
+                <span class="drive-appeal-tag">Urgent Appeal</span>
+                <span class="drive-org-badge" data-i18n="drive_org_val">സ്നേഹതീരം വോളന്റിയർ വിങ്, തിരൂർ (Reg: MPM/CA/149/2020)</span>
+              </div>
+              <h3 data-i18n="drive_appeal_title">നമ്മുടെ ഒരു മിനുട്ട് സമയം മറ്റൊരാളുടെ ജീവിതമാകാം</h3>
+              <p class="drive-appeal-desc" data-i18n="drive_appeal_desc"></p>
+            </div>
+
+            <div class="drive-main-card">
+              <div class="drive-meta-grid">
+                <div class="drive-meta-item">
+                  <div class="drive-meta-icon">
+                    <svg><use href="#icon-calendar"></use></svg>
+                  </div>
+                  <div class="drive-meta-text">
+                    <span class="drive-meta-label" data-i18n="drive_date_title">തീയതി</span>
+                    <strong class="drive-meta-value" data-i18n="drive_date_val">2026 സെപ്റ്റംബർ 27 (ഞായറാഴ്ച)</strong>
+                  </div>
+                </div>
+
+                <div class="drive-meta-item">
+                  <div class="drive-meta-icon">
+                    <svg><use href="#icon-clock"></use></svg>
+                  </div>
+                  <div class="drive-meta-text">
+                    <span class="drive-meta-label" data-i18n="drive_time_title">സമയം</span>
+                    <strong class="drive-meta-value" data-i18n="drive_time_val">രാവിലെ 09:00 – വൈകിട്ട് 05:00</strong>
+                  </div>
+                </div>
+
+                <div class="drive-meta-item">
+                  <div class="drive-meta-icon">
+                    <svg><use href="#icon-location"></use></svg>
+                  </div>
+                  <div class="drive-meta-text">
+                    <span class="drive-meta-label" data-i18n="drive_loc_title">സ്ഥലം</span>
+                    <strong class="drive-meta-value drive-location-highlight" data-i18n="drive_loc_val">എസ്.എസ്.എം പോളിടെക്നിക് കോളേജ്, തിരൂർ, മലപ്പുറം</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4 HIGHLIGHT PERKS FROM POSTER -->
+              <div class="drive-perks drive-perks-4">
+                <div class="drive-perk">
+                  <div class="drive-perk-check" aria-hidden="true">✓</div>
+                  <div class="drive-perk-body">
+                    <h3 data-i18n="drive_card1_title">സൂചി കുത്തലോ രക്തപരിശോധനയോ ഇല്ല</h3>
+                    <p data-i18n="drive_card1_desc"></p>
+                  </div>
+                </div>
+                <div class="drive-perk">
+                  <div class="drive-perk-check" aria-hidden="true">✓</div>
+                  <div class="drive-perk-body">
+                    <h3 data-i18n="drive_card2_title">കേവലം 1 മിനുട്ട് മാത്രം</h3>
+                    <p data-i18n="drive_card2_desc"></p>
+                  </div>
+                </div>
+                <div class="drive-perk">
+                  <div class="drive-perk-check" aria-hidden="true">✓</div>
+                  <div class="drive-perk-body">
+                    <h3 data-i18n="drive_card3_title">പ്രായപരിധി: 18 - 55 വയസ്സ്</h3>
+                    <p data-i18n="drive_card3_desc"></p>
+                  </div>
+                </div>
+                <div class="drive-perk">
+                  <div class="drive-perk-check" aria-hidden="true">✓</div>
+                  <div class="drive-perk-body">
+                    <h3 data-i18n="drive_card4_title">തികച്ചും സൗജന്യം</h3>
+                    <p data-i18n="drive_card4_desc"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CONTACT / HELPLINE STRIP -->
+              <div class="drive-contact-strip">
+                <div class="drive-contact-col">
+                  <span class="drive-contact-label" data-i18n="drive_contact_title">ഹെൽപ്പ്‌ലൈൻ നമ്പറുകൾ:</span>
+                  <div class="drive-contact-links">
+                    <a href="tel:+918086346346" class="drive-phone-link">
+                      <svg class="btn-icon" width="14" height="14"><use href="#icon-phone"></use></svg>
+                      80863 46346
+                    </a>
+                    <span class="drive-divider">·</span>
+                    <a href="tel:+919496246004" class="drive-phone-link">
+                      <svg class="btn-icon" width="14" height="14"><use href="#icon-phone"></use></svg>
+                      94962 46004
+                    </a>
+                  </div>
+                </div>
+                <div class="drive-email-col">
+                  <a href="mailto:snehatheeramtirur@gmail.com" class="drive-email-link">snehatheeramtirur@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="drive-actions">
+                <button type="button" id="calendarButton" class="btn btn-primary">
+                  <svg class="btn-icon" width="18" height="18"><use href="#icon-calendar"></use></svg>
+                  <span data-i18n="drive_cta_calendar">കലണ്ടറിൽ ചേർക്കുക</span>
+                </button>
+                <a href="https://www.google.com/maps/search/?api=1&query=SSM+Polytechnic+College+Tirur" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="directionsButton">
+                  <svg class="btn-icon" width="18" height="18"><use href="#icon-location"></use></svg>
+                  <span data-i18n="drive_cta_directions">കോളേജ് ലൊക്കേഷൻ</span>
+                </a>
+                <a href="tel:+918086346346" class="btn btn-outline drive-call-btn">
+                  <svg class="btn-icon" width="16" height="16"><use href="#icon-phone"></use></svg>
+                  <span data-i18n="drive_cta_call">ഹെൽപ്പ്‌ലൈൻ വിളിക്കുക</span>
+                </a>
               </div>
             </div>
           </div>

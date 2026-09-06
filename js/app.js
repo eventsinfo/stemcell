@@ -49,6 +49,37 @@ document.getElementById("registryButton").addEventListener("click", event => {
   alert("Connect this button to the official registration page of your chosen legitimate stem cell donor registry.");
 });
 
+const calendarBtn = document.getElementById("calendarButton");
+if (calendarBtn) {
+  calendarBtn.addEventListener("click", () => {
+    const icsLines = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Stem Cell Donor Registry//Drive Event//EN",
+      "CALSCALE:GREGORIAN",
+      "BEGIN:VEVENT",
+      "UID:stemcell-drive-20260927@matchhope",
+      "DTSTAMP:20260907T000000Z",
+      "DTSTART:20260927T033000Z",
+      "DTEND:20260927T113000Z",
+      "SUMMARY:Mega Stem Cell Donor Registration Camp (For Rafiya Sherin)",
+      "DESCRIPTION:Mega Stem Cell Donor Registration Camp organized by Snehatheeram Volunteer Wing for Rafiya Sherin and others. Painless 1-minute cheek swab (no needles/blood test). Eligible age: 18-55. Location: SSM Polytechnic College, Tirur, Malappuram. Helplines: 80863 46346 / 94962 46004.",
+      "LOCATION:SSM Polytechnic College, Tirur, Malappuram Dt.",
+      "STATUS:CONFIRMED",
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ];
+    const blob = new Blob([icsLines.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "stemcell-donor-drive-2026-09-27.ics";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+  });
+}
+
 function setFaqState(item, isOpen) {
   item.classList.toggle("is-open", isOpen);
   item.querySelector(".faq-question").setAttribute("aria-expanded", String(isOpen));

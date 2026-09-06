@@ -174,6 +174,22 @@ svg {
   flex-wrap: wrap;
 }
 
+.nav-drive-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sage);
+  background: var(--sage-light);
+  padding: 5px 12px;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-drive-link:hover {
+  background: var(--sage);
+  color: var(--card);
+}
+
 .lang-toggle {
   display: inline-flex;
   align-items: center;
@@ -461,6 +477,291 @@ h2 {
   font-size: 15px;
 }
 
+/* DONOR REGISTRATION DRIVE */
+.drive-section {
+  background: linear-gradient(180deg, var(--beige) 0%, var(--beige-2) 100%);
+  position: relative;
+}
+
+.drive-badge-wrap {
+  margin-bottom: 12px;
+}
+
+.drive-badge {
+  display: inline-block;
+  background: var(--ochre-light);
+  color: var(--ochre);
+  border: 1px solid rgba(168, 118, 63, 0.25);
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+/* PATIENT APPEAL STORY CARD */
+.drive-appeal-card {
+  max-width: 860px;
+  margin: 28px auto 0;
+  background: var(--card);
+  border: 1px solid var(--clay);
+  border-left: 5px solid var(--clay);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(177, 97, 74, 0.08);
+}
+
+.drive-appeal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.drive-appeal-tag {
+  background: var(--clay);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.drive-org-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.drive-appeal-card h3 {
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.drive-appeal-desc {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.drive-main-card {
+  max-width: 860px;
+  margin: 36px auto 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.drive-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.drive-meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.drive-meta-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--sage-light);
+  color: var(--sage);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.drive-meta-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.drive-meta-item:nth-child(2) .drive-meta-icon {
+  background: var(--ochre-light);
+  color: var(--ochre);
+}
+
+.drive-meta-item:nth-child(3) .drive-meta-icon {
+  background: var(--clay-light);
+  color: var(--clay);
+}
+
+.drive-meta-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.drive-meta-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.drive-meta-value {
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.drive-location-highlight {
+  color: var(--clay);
+  word-break: break-word;
+}
+
+.drive-perks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.drive-perk {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--beige);
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(221, 208, 184, 0.6);
+}
+
+.drive-perk-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--card);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.drive-perk-body h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.drive-perk-body p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.drive-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-top: 28px;
+  flex-wrap: wrap;
+}
+
+.drive-actions .btn {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.drive-perks-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* CONTACT STRIP */
+.drive-contact-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--beige);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-top: 24px;
+  font-size: 13px;
+}
+
+.drive-contact-col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.drive-contact-label {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.drive-contact-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drive-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: var(--sage);
+  transition: opacity 0.15s ease;
+}
+
+.drive-phone-link:hover {
+  text-decoration: underline;
+}
+
+.drive-divider {
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+.drive-email-link {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.drive-email-link:hover {
+  color: var(--ink);
+}
+
+.drive-call-btn {
+  color: var(--clay);
+  border-color: var(--clay);
+}
+
+.drive-call-btn:hover {
+  background: var(--clay);
+  color: var(--card);
+}
+
 .safety-note {
   background: var(--card);
   border: 1px solid var(--line);
@@ -635,6 +936,21 @@ footer {
   .safety-list {
     grid-template-columns: 1fr;
   }
+
+  .drive-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .drive-perks,
+  .drive-perks-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .drive-contact-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 560px) {
@@ -661,13 +977,19 @@ footer {
   }
 
   .hero-actions,
-  .final-actions {
+  .final-actions,
+  .drive-actions {
     justify-content: center;
   }
 
   .hero-actions .btn,
-  .final-actions .btn {
+  .final-actions .btn,
+  .drive-actions .btn {
     flex: 1 1 auto;
+  }
+
+  .drive-main-card {
+    padding: 24px 18px;
   }
 
   .footer-inner {
