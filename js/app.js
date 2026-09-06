@@ -49,13 +49,18 @@ document.getElementById("registryButton").addEventListener("click", event => {
   alert("Connect this button to the official registration page of your chosen legitimate stem cell donor registry.");
 });
 
-document.querySelectorAll("details").forEach(item => {
-  item.addEventListener("toggle", () => {
-    if (item.open) {
-      document.querySelectorAll("details").forEach(other => {
-        if (other !== item) other.removeAttribute("open");
-      });
-    }
+function setFaqState(item, isOpen) {
+  item.classList.toggle("is-open", isOpen);
+  item.querySelector(".faq-question").setAttribute("aria-expanded", String(isOpen));
+}
+
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.querySelector(".faq-question").addEventListener("click", () => {
+    const isOpen = item.classList.contains("is-open");
+    document.querySelectorAll(".faq-item").forEach(other => {
+      if (other !== item) setFaqState(other, false);
+    });
+    setFaqState(item, !isOpen);
   });
 });
 

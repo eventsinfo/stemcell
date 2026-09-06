@@ -374,7 +374,7 @@ h2 {
 
 .card,
 .step,
-details {
+.faq-item {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -495,42 +495,73 @@ details {
   margin: 30px auto 0;
 }
 
-details {
+.faq-item {
   margin-bottom: 10px;
   overflow: hidden;
+  border-radius: 14px;
 }
 
-summary {
+.faq-question {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
   cursor: pointer;
-  list-style: none;
   padding: 17px 20px;
   font-weight: 700;
+  font: inherit;
   display: flex;
   justify-content: space-between;
   gap: 16px;
   font-size: 15px;
+  text-align: left;
 }
 
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary::after {
+.faq-question::after {
   content: "+";
   color: var(--sage);
   font-size: 19px;
   line-height: 1;
   flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
-details[open] summary::after {
+.faq-item.is-open .faq-question::after {
   content: "\2212";
+  transform: rotate(180deg);
 }
 
-details p {
-  padding: 0 20px 20px;
+.faq-answer p {
+  margin: 0;
+  padding: 0 20px;
   color: var(--muted);
   font-size: 14px;
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  min-height: 0;
+  overflow: hidden;
+  transition: grid-template-rows 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-answer p {
+  min-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.35s ease;
+}
+
+.faq-item.is-open .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-item.is-open .faq-answer p {
+  padding-bottom: 20px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .final-cta {
@@ -648,5 +679,6 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+    animation: none !important;
   }
 }
