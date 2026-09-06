@@ -329,11 +329,8 @@ h2 {
 
 /* HERO VISUAL CARD & ANIMATED DONATION SVG */
 .hero-visual-card {
-  background: var(--card);
-  border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 24px 20px 18px;
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -373,7 +370,9 @@ h2 {
 
 /* Traveling Cells along Lifeline */
 .cell-particle {
-  offset-path: path("M 80 105 C 145 45, 185 45, 230 105 C 275 165, 315 165, 380 105");
+  offset-path: path(
+    "M 80 105 C 145 45, 185 45, 230 105 C 275 165, 315 165, 380 105"
+  );
   animation: travel-lifeline 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
@@ -475,7 +474,10 @@ h2 {
 }
 
 @keyframes heart-beat {
-  0%, 28%, 70%, 100% {
+  0%,
+  28%,
+  70%,
+  100% {
     transform: scale(1);
   }
   14% {
@@ -493,8 +495,14 @@ h2 {
 }
 
 @keyframes sparkle-anim {
-  0% { transform: scale(0.8) rotate(-10deg); opacity: 0.7; }
-  100% { transform: scale(1.25) rotate(15deg); opacity: 1; }
+  0% {
+    transform: scale(0.8) rotate(-10deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.25) rotate(15deg);
+    opacity: 1;
+  }
 }
 
 .floating-mini-dot {
@@ -506,8 +514,12 @@ h2 {
 }
 
 @keyframes float-mini {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-4px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
 }
 
 /* Footer Step Numbers Only */
@@ -1224,7 +1236,9 @@ h2 {
   overflow: hidden;
   opacity: 0;
   transform: translateY(-6px);
-  transition: opacity 0.2s ease, transform 0.35s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.35s ease;
 }
 
 .faq-item.is-open .faq-answer {
