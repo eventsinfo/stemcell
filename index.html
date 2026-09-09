@@ -44,7 +44,9 @@
         <circle cx="12" cy="10" r="2.5"></circle>
       </symbol>
       <symbol id="icon-phone" viewBox="0 0 24 24">
-        <path d="M6 3h3l2 5-2 1.5a14 14 0 0 0 5.5 5.5L16 13l5 2v3c0 1.1-.9 2-2 2C10.7 20 4 13.3 4 5a2 2 0 0 1 2-2Z"></path>
+        <path
+          d="M6 3h3l2 5-2 1.5a14 14 0 0 0 5.5 5.5L16 13l5 2v3c0 1.1-.9 2-2 2C10.7 20 4 13.3 4 5a2 2 0 0 1 2-2Z"
+        ></path>
       </symbol>
       <symbol id="icon-blood" viewBox="0 0 24 24">
         <path d="M12 3s6 6.1 6 11a6 6 0 0 1-12 0c0-4.9 6-11 6-11Z"></path>
@@ -55,452 +57,16 @@
         <path d="m8.5 12 2.2 2.2 4.8-5"></path>
       </symbol>
       <symbol id="icon-heart" viewBox="0 0 24 24">
-        <path d="M20.8 8.8c0 5-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.8A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 8.8 2.8Z"></path>
+        <path
+          d="M20.8 8.8c0 5-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.8A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 8.8 2.8Z"
+        ></path>
       </symbol>
     </svg>
 
-      <!-- HEADER -->
-      <header class="site-header">
-        <div class="container">
-          <nav class="nav">
-            <a class="brand" href="#home" aria-label="Snehatheeram home">
-              <img
-                src="assets/images/Snehatheeram full logo.webp"
-                alt="Snehatheeram logo"
-                class="brand-logo"
-              />
-            </a>
-
-            <div class="nav-right">
-              <div class="lang-toggle" role="group" aria-label="Language">
-                <button
-                  type="button"
-                  class="lang-btn"
-                  data-lang="ml"
-                  aria-pressed="true"
-                >
-                  ML
-                </button>
-                <span class="lang-divider">|</span>
-                <button
-                  type="button"
-                  class="lang-btn"
-                  data-lang="en"
-                  aria-pressed="false"
-                >
-                  EN
-                </button>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      <main>
-        <!-- DONOR REGISTRATION DRIVE -->
-        <section class="section drive-section" id="drive">
-          <div class="container center">
-
-            <h2 data-i18n="drive_h2">
-            </h2>
-            <p class="intro" data-i18n="drive_intro"></p>
-
-            <!-- PATIENT APPEAL STORY CARD -->
-            <div class="drive-appeal-card">
-              <div class="drive-appeal-header">
-                <div class="drive-countdown" aria-live="polite">
-                  <span class="drive-countdown-label" data-i18n="drive_countdown_label"></span>
-                  <div class="countdown-units">
-                    <div class="countdown-unit"><strong id="countdownDays">00</strong><span data-i18n="countdown_days"></span></div>
-                    <div class="countdown-unit"><strong id="countdownHours">00</strong><span data-i18n="countdown_hours"></span></div>
-                    <div class="countdown-unit"><strong id="countdownMinutes">00</strong><span data-i18n="countdown_minutes"></span></div>
-                    <div class="countdown-unit"><strong id="countdownSeconds">00</strong><span data-i18n="countdown_seconds"></span></div>
-                  </div>
-                </div>
-                <span class="drive-org-badge" data-i18n="drive_org_val"
-                  >
-                  </span
-                >
-              </div>
-              <h3 data-i18n="drive_appeal_title">
-              </h3>
-              <p class="drive-appeal-desc" data-i18n="drive_appeal_desc"></p>
-            </div>
-
-            <div class="drive-main-card">
-              <div class="drive-meta-grid">
-                <div class="drive-meta-item">
-                  <div class="drive-meta-icon">
-                    <svg><use href="#icon-calendar"></use></svg>
-                  </div>
-                  <div class="drive-meta-text">
-                    <span class="drive-meta-label" data-i18n="drive_date_title"
-                      ></span
-                    >
-                    <strong class="drive-meta-value" data-i18n="drive_date_val"
-                      ></strong
-                    >
-                  </div>
-                </div>
-
-                <div class="drive-meta-item">
-                  <div class="drive-meta-icon">
-                    <svg><use href="#icon-clock"></use></svg>
-                  </div>
-                  <div class="drive-meta-text">
-                    <span class="drive-meta-label" data-i18n="drive_time_title"
-                      ></span
-                    >
-                    <strong class="drive-meta-value" data-i18n="drive_time_val"
-                      ></strong
-                    >
-                  </div>
-                </div>
-
-                <div class="drive-meta-item">
-                  <div class="drive-meta-icon">
-                    <svg><use href="#icon-location"></use></svg>
-                  </div>
-                  <div class="drive-meta-text">
-                    <span class="drive-meta-label" data-i18n="drive_loc_title"
-                      ></span
-                    >
-                    <strong
-                      class="drive-meta-value drive-location-highlight"
-                      data-i18n="drive_loc_val"
-                      ></strong
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-- 4 HIGHLIGHT PERKS FROM POSTER -->
-              <div class="drive-perks drive-perks-4">
-                <div class="drive-perk">
-                  <div class="drive-perk-check" aria-hidden="true">✓</div>
-                  <div class="drive-perk-body">
-                    <h3 data-i18n="drive_card1_title">
-                    </h3>
-                    <p data-i18n="drive_card1_desc"></p>
-                  </div>
-                </div>
-                <div class="drive-perk">
-                  <div class="drive-perk-check" aria-hidden="true">✓</div>
-                  <div class="drive-perk-body">
-                    <h3 data-i18n="drive_card2_title">
-                    </h3>
-                    <p data-i18n="drive_card2_desc"></p>
-                  </div>
-                </div>
-                <div class="drive-perk">
-                  <div class="drive-perk-check" aria-hidden="true">✓</div>
-                  <div class="drive-perk-body">
-                    <h3 data-i18n="drive_card3_title">
-                    </h3>
-                    <p data-i18n="drive_card3_desc"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="drive-register-action">
-                <a
-                  href="https://forms.gle/31Vgob6qD67SqmXq5"
-                  class="btn btn-primary"
-                  data-i18n="drive_cta_register"
-                >
-                </a>
-              </div>
-
-              <!-- CONTACT / HELPLINE STRIP -->
-              <div class="drive-contact-strip">
-                <div class="drive-contact-col">
-                  <span
-                    class="drive-contact-label"
-                    data-i18n="drive_contact_title"
-                    ></span
-                  >
-                  <div class="drive-contact-links">
-                    <a href="tel:+918086346346" class="drive-phone-link">
-                      <svg class="btn-icon" width="14" height="14">
-                        <use href="#icon-phone"></use>
-                      </svg>
-                      80863 46346
-                    </a>
-                    <span class="drive-divider">·</span>
-                    <a href="tel:+919496246004" class="drive-phone-link">
-                      <svg class="btn-icon" width="14" height="14">
-                        <use href="#icon-phone"></use>
-                      </svg>
-                      94962 46004
-                    </a>
-                  </div>
-                </div>
-                <div class="drive-email-col">
-                  <a
-                    href="mailto:snehatheeramtirur@gmail.com"
-                    class="drive-email-link"
-                    >snehatheeramtirur@gmail.com</a
-                  >
-                </div>
-              </div>
-
-              <div class="drive-actions">
-                <button
-                  type="button"
-                  id="calendarButton"
-                  class="btn btn-primary"
-                >
-                  <svg class="btn-icon" width="18" height="18">
-                    <use href="#icon-calendar"></use>
-                  </svg>
-                  <span data-i18n="drive_cta_calendar"></span>
-                </button>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=SSM+Polytechnic+College+Tirur"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-outline"
-                  id="directionsButton"
-                >
-                  <svg class="btn-icon" width="18" height="18">
-                    <use href="#icon-location"></use>
-                  </svg>
-                  <span data-i18n="drive_cta_directions"></span>
-                </a>
-                <a
-                  href="tel:+918086346346"
-                  class="btn btn-outline drive-call-btn"
-                >
-                  <svg class="btn-icon" width="16" height="16">
-                    <use href="#icon-phone"></use>
-                  </svg>
-                  <span data-i18n="drive_cta_call"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- WHY IT MATTERS -->
-        <section class="section" id="why">
-          <div class="container center">
-            <div class="eyebrow" data-i18n="why_label"></div>
-            <h2 data-i18n="why_h2"></h2>
-            <p class="intro" data-i18n="why_intro"></p>
-
-            <!-- STEM CELLS VISUAL EXPLAINER -->
-            <div class="stemcell-explainer-card">
-              <div class="explainer-media">
-                <img
-                  src="assets/images/stem-cells.jpg"
-                  alt="Stem cells branching into healthy blood cells illustration"
-                  class="explainer-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="explainer-content">
-                <div class="explainer-tag" data-i18n="stemcell_guide_tag">
-                </div>
-                <h3 data-i18n="stemcell_guide_h3">
-                </h3>
-                <p data-i18n="stemcell_guide_p">
-                </p>
-                <ul class="explainer-points">
-                  <li class="explainer-point">
-                    <div class="card-icon">
-                      <svg><use href="#icon-blood"></use></svg>
-                    </div>
-                    <div>
-                      <h4 data-i18n="card1_h3"></h4>
-                      <p data-i18n="card1_p"></p>
-                    </div>
-                  </li>
-                  <li class="explainer-point">
-                    <div class="card-icon">
-                      <svg><use href="#icon-shield"></use></svg>
-                    </div>
-                    <div>
-                      <h4 data-i18n="card2_h3"></h4>
-                      <p data-i18n="card2_p"></p>
-                    </div>
-                  </li>
-                  <li class="explainer-point">
-                    <div class="card-icon">
-                      <svg><use href="#icon-heart"></use></svg>
-                    </div>
-                    <div>
-                      <h4 data-i18n="card3_h3"></h4>
-                      <p data-i18n="card3_p"></p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- HOW IT WORKS -->
-        <section class="section section-tinted" id="how">
-          <div class="container center">
-            <div class="eyebrow" data-i18n="how_label"></div>
-            <h2 data-i18n="how_h2"></h2>
-            <p class="intro" data-i18n="how_intro"></p>
-
-            <div class="registry-focus">
-              <div class="registry-focus-copy">
-                <div class="eyebrow" data-i18n="registry_focus_title"></div>
-                <p data-i18n="registry_focus_body"></p>
-              </div>
-              <div class="match-probability">
-                <strong data-i18n="match_probability_label"></strong>
-                <p data-i18n="match_probability_body"></p>
-              </div>
-            </div>
-
-            <!-- VISUAL PROCEDURE GUIDE: SWAB STEPS -->
-            <div class="procedure-guide">
-              <div class="procedure-header">
-                <div class="eyebrow" data-i18n="procedure_label">
-                </div>
-                <h3 data-i18n="procedure_h2">
-                </h3>
-                <p class="intro" data-i18n="procedure_intro">
-                </p>
-              </div>
-
-              <div class="procedure-cards">
-                <div class="procedure-card">
-                  <div class="procedure-media">
-                    <img
-                      src="assets/images/swab1.png"
-                      alt="Step one of the cheek swab procedure"
-                      class="procedure-img"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h4 class="procedure-step-name" data-i18n="swab_step1"></h4>
-                </div>
-
-                <div class="procedure-card">
-                  <div class="procedure-media">
-                    <img
-                      src="assets/images/swab2.png"
-                      alt="Step two of the cheek swab procedure"
-                      class="procedure-img"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h4 class="procedure-step-name" data-i18n="swab_step2"></h4>
-                </div>
-
-                <div class="procedure-card">
-                  <div class="procedure-media">
-                    <img
-                      src="assets/images/swab3.png"
-                      alt="Step three of the cheek swab procedure"
-                      class="procedure-img"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h4 class="procedure-step-name" data-i18n="swab_step3"></h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SAFETY -->
-        <section class="section" id="safety">
-          <div class="container center">
-            <div class="eyebrow" data-i18n="safety_label"></div>
-            <h2 data-i18n="safety_h2"></h2>
-
-            <div class="safety-list">
-              <div class="safety-item">
-                <strong data-i18n="safety1_title"></strong>
-                <span data-i18n="safety1_desc"></span>
-              </div>
-              <div class="safety-item">
-                <strong data-i18n="safety2_title"></strong>
-                <span data-i18n="safety2_desc"></span>
-              </div>
-              <div class="safety-item">
-                <strong data-i18n="safety3_title"></strong>
-                <span data-i18n="safety3_desc"></span>
-              </div>
-            </div>
-
-            <div class="safety-note" data-i18n="safety_note"></div>
-          </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="section section-tinted" id="faq">
-          <div class="container center">
-            <div class="eyebrow" data-i18n="faq_label"></div>
-            <h2 data-i18n="faq_h2"></h2>
-
-            <div class="faq-list">
-              <div class="faq-item">
-                <button
-                  class="faq-question"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="faq-answer-1"
-                  data-i18n="faq1_q"
-                ></button>
-                <div class="faq-answer">
-                  <p id="faq-answer-1" data-i18n="faq1_a"></p>
-                </div>
-              </div>
-              <div class="faq-item">
-                <button
-                  class="faq-question"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="faq-answer-2"
-                  data-i18n="faq2_q"
-                ></button>
-                <div class="faq-answer">
-                  <p id="faq-answer-2" data-i18n="faq2_a"></p>
-                </div>
-              </div>
-              <div class="faq-item">
-                <button
-                  class="faq-question"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="faq-answer-3"
-                  data-i18n="faq3_q"
-                ></button>
-                <div class="faq-answer">
-                  <p id="faq-answer-3" data-i18n="faq3_a"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- FINAL CTA -->
-        <section class="final-cta" id="join">
-          <div class="container">
-            <h2 data-i18n="cta_h2"></h2>
-            <p data-i18n="cta_p"></p>
-            <div class="final-actions">
-              <a
-                href="https://forms.gle/31Vgob6qD67SqmXq5"
-                class="btn btn-primary"
-                id="registryButton"
-                data-i18n="cta_button"
-              ></a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <!-- FOOTER -->
-      <footer>
-        <div class="container footer-inner">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav">
           <a class="brand" href="#home" aria-label="Snehatheeram home">
             <img
               src="assets/images/Snehatheeram full logo.webp"
@@ -508,9 +74,456 @@
               class="brand-logo"
             />
           </a>
-          <div class="footer-note" data-i18n="footer_note"></div>
+
+          <div class="nav-right">
+            <div class="lang-toggle" role="group" aria-label="Language">
+              <button
+                type="button"
+                class="lang-btn"
+                data-lang="ml"
+                aria-pressed="true"
+              >
+                ML
+              </button>
+              <span class="lang-divider">|</span>
+              <button
+                type="button"
+                class="lang-btn"
+                data-lang="en"
+                aria-pressed="false"
+              >
+                EN
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- DONOR REGISTRATION DRIVE -->
+      <section class="section drive-section" id="drive">
+        <div class="container center">
+          <h2 data-i18n="drive_h2"></h2>
+          <p class="intro" data-i18n="drive_intro"></p>
+
+          <!-- PATIENT APPEAL STORY CARD -->
+          <div class="drive-appeal-card">
+            <div class="drive-appeal-header">
+              <div class="drive-countdown" aria-live="polite">
+                <span
+                  class="drive-countdown-label"
+                  data-i18n="drive_countdown_label"
+                ></span>
+                <div class="countdown-units">
+                  <div class="countdown-unit">
+                    <strong id="countdownDays">00</strong
+                    ><span data-i18n="countdown_days"></span>
+                  </div>
+                  <div class="countdown-unit">
+                    <strong id="countdownHours">00</strong
+                    ><span data-i18n="countdown_hours"></span>
+                  </div>
+                  <div class="countdown-unit">
+                    <strong id="countdownMinutes">00</strong
+                    ><span data-i18n="countdown_minutes"></span>
+                  </div>
+                  <div class="countdown-unit">
+                    <strong id="countdownSeconds">00</strong
+                    ><span data-i18n="countdown_seconds"></span>
+                  </div>
+                </div>
+              </div>
+              <span class="drive-org-badge" data-i18n="drive_org_val"> </span>
+            </div>
+            <h3 data-i18n="drive_appeal_title"></h3>
+            <p class="drive-appeal-desc" data-i18n="drive_appeal_desc"></p>
+          </div>
+
+          <div class="drive-main-card">
+            <div class="drive-meta-grid">
+              <div class="drive-meta-item">
+                <div class="drive-meta-icon">
+                  <svg><use href="#icon-calendar"></use></svg>
+                </div>
+                <div class="drive-meta-text">
+                  <span
+                    class="drive-meta-label"
+                    data-i18n="drive_date_title"
+                  ></span>
+                  <strong
+                    class="drive-meta-value"
+                    data-i18n="drive_date_val"
+                  ></strong>
+                </div>
+              </div>
+
+              <div class="drive-meta-item">
+                <div class="drive-meta-icon">
+                  <svg><use href="#icon-clock"></use></svg>
+                </div>
+                <div class="drive-meta-text">
+                  <span
+                    class="drive-meta-label"
+                    data-i18n="drive_time_title"
+                  ></span>
+                  <strong
+                    class="drive-meta-value"
+                    data-i18n="drive_time_val"
+                  ></strong>
+                </div>
+              </div>
+
+              <div class="drive-meta-item">
+                <div class="drive-meta-icon">
+                  <svg><use href="#icon-location"></use></svg>
+                </div>
+                <div class="drive-meta-text">
+                  <span
+                    class="drive-meta-label"
+                    data-i18n="drive_loc_title"
+                  ></span>
+                  <strong
+                    class="drive-meta-value drive-location-highlight"
+                    data-i18n="drive_loc_val"
+                  ></strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 HIGHLIGHT PERKS FROM POSTER -->
+            <div class="drive-perks drive-perks-4">
+              <div class="drive-perk">
+                <div class="drive-perk-check" aria-hidden="true">✓</div>
+                <div class="drive-perk-body">
+                  <h3 data-i18n="drive_card1_title"></h3>
+                  <p data-i18n="drive_card1_desc"></p>
+                </div>
+              </div>
+              <div class="drive-perk">
+                <div class="drive-perk-check" aria-hidden="true">✓</div>
+                <div class="drive-perk-body">
+                  <h3 data-i18n="drive_card2_title"></h3>
+                  <p data-i18n="drive_card2_desc"></p>
+                </div>
+              </div>
+              <div class="drive-perk">
+                <div class="drive-perk-check" aria-hidden="true">✓</div>
+                <div class="drive-perk-body">
+                  <h3 data-i18n="drive_card3_title"></h3>
+                  <p data-i18n="drive_card3_desc"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="drive-register-action">
+              <a
+                href="https://forms.gle/31Vgob6qD67SqmXq5"
+                class="btn btn-primary"
+                data-i18n="drive_cta_register"
+              >
+              </a>
+            </div>
+
+            <!-- CONTACT / HELPLINE STRIP -->
+            <div class="drive-contact-strip">
+              <div class="drive-contact-col">
+                <span
+                  class="drive-contact-label"
+                  data-i18n="drive_contact_title"
+                ></span>
+                <div class="drive-contact-links">
+                  <a href="tel:+918086346346" class="drive-phone-link">
+                    <svg class="btn-icon" width="14" height="14">
+                      <use href="#icon-phone"></use>
+                    </svg>
+                    80863 46346
+                  </a>
+                  <span class="drive-divider">·</span>
+                  <a href="tel:+919496246004" class="drive-phone-link">
+                    <svg class="btn-icon" width="14" height="14">
+                      <use href="#icon-phone"></use>
+                    </svg>
+                    94962 46004
+                  </a>
+                </div>
+              </div>
+              <div class="drive-email-col">
+                <a
+                  href="mailto:snehatheeramtirur@gmail.com"
+                  class="drive-email-link"
+                  >snehatheeramtirur@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="drive-actions">
+              <button type="button" id="calendarButton" class="btn btn-primary">
+                <svg class="btn-icon" width="18" height="18">
+                  <use href="#icon-calendar"></use>
+                </svg>
+                <span data-i18n="drive_cta_calendar"></span>
+              </button>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=SSM+Polytechnic+College+Tirur"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+                id="directionsButton"
+              >
+                <svg class="btn-icon" width="18" height="18">
+                  <use href="#icon-location"></use>
+                </svg>
+                <span data-i18n="drive_cta_directions"></span>
+              </a>
+              <a
+                href="tel:+918086346346"
+                class="btn btn-outline drive-call-btn"
+              >
+                <svg class="btn-icon" width="16" height="16">
+                  <use href="#icon-phone"></use>
+                </svg>
+                <span data-i18n="drive_cta_call"></span>
+              </a>
+            </div>
+          </div>
         </div>
-      </footer>
+      </section>
+
+      <!-- WHY IT MATTERS -->
+      <section class="section" id="why">
+        <div class="container center">
+          <div class="eyebrow" data-i18n="why_label"></div>
+          <h2 data-i18n="why_h2"></h2>
+          <p class="intro" data-i18n="why_intro"></p>
+
+          <!-- STEM CELLS VISUAL EXPLAINER -->
+          <div class="stemcell-explainer-card">
+            <div class="explainer-media">
+              <img
+                src="assets/images/stem-cells.jpg"
+                alt="Stem cells branching into healthy blood cells illustration"
+                class="explainer-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="explainer-content">
+              <div class="explainer-tag" data-i18n="stemcell_guide_tag"></div>
+              <h3 data-i18n="stemcell_guide_h3"></h3>
+              <p data-i18n="stemcell_guide_p"></p>
+              <ul class="explainer-points">
+                <li class="explainer-point">
+                  <div class="card-icon">
+                    <svg><use href="#icon-blood"></use></svg>
+                  </div>
+                  <div>
+                    <h4 data-i18n="card1_h3"></h4>
+                    <p data-i18n="card1_p"></p>
+                  </div>
+                </li>
+                <li class="explainer-point">
+                  <div class="card-icon">
+                    <svg><use href="#icon-shield"></use></svg>
+                  </div>
+                  <div>
+                    <h4 data-i18n="card2_h3"></h4>
+                    <p data-i18n="card2_p"></p>
+                  </div>
+                </li>
+                <li class="explainer-point">
+                  <div class="card-icon">
+                    <svg><use href="#icon-heart"></use></svg>
+                  </div>
+                  <div>
+                    <h4 data-i18n="card3_h3"></h4>
+                    <p data-i18n="card3_p"></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section section-tinted" id="how">
+        <div class="container center">
+          <div class="eyebrow" data-i18n="how_label"></div>
+          <h2 data-i18n="how_h2"></h2>
+          <p class="intro" data-i18n="how_intro"></p>
+
+          <div class="registry-focus">
+            <div class="registry-focus-copy">
+              <div class="eyebrow" data-i18n="registry_focus_title"></div>
+              <p data-i18n="registry_focus_body"></p>
+            </div>
+            <div class="match-probability">
+              <strong data-i18n="match_probability_label"></strong>
+              <p data-i18n="match_probability_body"></p>
+            </div>
+          </div>
+
+          <!-- VISUAL PROCEDURE GUIDE: SWAB STEPS -->
+          <div class="procedure-guide">
+            <div class="procedure-header">
+              <div class="eyebrow" data-i18n="procedure_label"></div>
+              <h3 data-i18n="procedure_h2"></h3>
+              <p class="intro" data-i18n="procedure_intro"></p>
+            </div>
+
+            <div class="procedure-cards">
+              <div class="procedure-card">
+                <div class="procedure-media">
+                  <img
+                    src="assets/images/swab1.png"
+                    alt="Step one of the cheek swab procedure"
+                    class="procedure-img"
+                    loading="lazy"
+                  />
+                </div>
+                <h4 class="procedure-step-name" data-i18n="swab_step1"></h4>
+              </div>
+
+              <div class="procedure-card">
+                <div class="procedure-media">
+                  <img
+                    src="assets/images/swab2.png"
+                    alt="Step two of the cheek swab procedure"
+                    class="procedure-img"
+                    loading="lazy"
+                  />
+                </div>
+                <h4 class="procedure-step-name" data-i18n="swab_step2"></h4>
+              </div>
+
+              <div class="procedure-card">
+                <div class="procedure-media">
+                  <img
+                    src="assets/images/swab3.png"
+                    alt="Step three of the cheek swab procedure"
+                    class="procedure-img"
+                    loading="lazy"
+                  />
+                </div>
+                <h4 class="procedure-step-name" data-i18n="swab_step3"></h4>
+              </div>
+            </div>
+
+            <div class="procedure-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/MMZ9VoXmi3c?autoplay=1&mute=1&playsinline=1&rel=0"
+                title="Cheek swab sample collection video"
+                loading="lazy"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAFETY -->
+      <section class="section" id="safety">
+        <div class="container center">
+          <div class="eyebrow" data-i18n="safety_label"></div>
+          <h2 data-i18n="safety_h2"></h2>
+
+          <div class="safety-list">
+            <div class="safety-item">
+              <strong data-i18n="safety1_title"></strong>
+              <span data-i18n="safety1_desc"></span>
+            </div>
+            <div class="safety-item">
+              <strong data-i18n="safety2_title"></strong>
+              <span data-i18n="safety2_desc"></span>
+            </div>
+            <div class="safety-item">
+              <strong data-i18n="safety3_title"></strong>
+              <span data-i18n="safety3_desc"></span>
+            </div>
+          </div>
+
+          <div class="safety-note" data-i18n="safety_note"></div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section-tinted" id="faq">
+        <div class="container center">
+          <div class="eyebrow" data-i18n="faq_label"></div>
+          <h2 data-i18n="faq_h2"></h2>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <button
+                class="faq-question"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+                data-i18n="faq1_q"
+              ></button>
+              <div class="faq-answer">
+                <p id="faq-answer-1" data-i18n="faq1_a"></p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button
+                class="faq-question"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+                data-i18n="faq2_q"
+              ></button>
+              <div class="faq-answer">
+                <p id="faq-answer-2" data-i18n="faq2_a"></p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button
+                class="faq-question"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+                data-i18n="faq3_q"
+              ></button>
+              <div class="faq-answer">
+                <p id="faq-answer-3" data-i18n="faq3_a"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="final-cta" id="join">
+        <div class="container">
+          <h2 data-i18n="cta_h2"></h2>
+          <p data-i18n="cta_p"></p>
+          <div class="final-actions">
+            <a
+              href="https://forms.gle/31Vgob6qD67SqmXq5"
+              class="btn btn-primary"
+              id="registryButton"
+              data-i18n="cta_button"
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-inner">
+        <a class="brand" href="#home" aria-label="Snehatheeram home">
+          <img
+            src="assets/images/Snehatheeram full logo.webp"
+            alt="Snehatheeram logo"
+            class="brand-logo"
+          />
+        </a>
+        <div class="footer-note" data-i18n="footer_note"></div>
+      </div>
+    </footer>
 
     <script src="./js/app.js?v=20260908" defer></script>
   </body>

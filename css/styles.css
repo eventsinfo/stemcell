@@ -898,6 +898,24 @@ h2 {
   margin-top: 6px;
 }
 
+.procedure-video {
+  width: min(100%, 760px);
+  aspect-ratio: 16 / 9;
+  margin: 28px auto 0;
+  overflow: hidden;
+  background: #201d1a;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.procedure-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 .procedure-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
