@@ -90,11 +90,6 @@ async function init() {
   });
 }
 
-document.getElementById("registryButton").addEventListener("click", event => {
-  event.preventDefault();
-  alert("Connect this button to the official registration page of your chosen legitimate stem cell donor registry.");
-});
-
 const calendarBtn = document.getElementById("calendarButton");
 if (calendarBtn) {
   calendarBtn.addEventListener("click", () => {

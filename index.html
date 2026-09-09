@@ -305,30 +305,35 @@
                 </h3>
                 <p data-i18n="stemcell_guide_p">
                 </p>
-              </div>
-            </div>
-
-            <div class="cards">
-              <div class="card">
-                <div class="card-icon">
-                  <svg><use href="#icon-blood"></use></svg>
-                </div>
-                <h3 data-i18n="card1_h3"></h3>
-                <p data-i18n="card1_p"></p>
-              </div>
-              <div class="card">
-                <div class="card-icon">
-                  <svg><use href="#icon-shield"></use></svg>
-                </div>
-                <h3 data-i18n="card2_h3"></h3>
-                <p data-i18n="card2_p"></p>
-              </div>
-              <div class="card">
-                <div class="card-icon">
-                  <svg><use href="#icon-heart"></use></svg>
-                </div>
-                <h3 data-i18n="card3_h3"></h3>
-                <p data-i18n="card3_p"></p>
+                <ul class="explainer-points">
+                  <li class="explainer-point">
+                    <div class="card-icon">
+                      <svg><use href="#icon-blood"></use></svg>
+                    </div>
+                    <div>
+                      <h4 data-i18n="card1_h3"></h4>
+                      <p data-i18n="card1_p"></p>
+                    </div>
+                  </li>
+                  <li class="explainer-point">
+                    <div class="card-icon">
+                      <svg><use href="#icon-shield"></use></svg>
+                    </div>
+                    <div>
+                      <h4 data-i18n="card2_h3"></h4>
+                      <p data-i18n="card2_p"></p>
+                    </div>
+                  </li>
+                  <li class="explainer-point">
+                    <div class="card-icon">
+                      <svg><use href="#icon-heart"></use></svg>
+                    </div>
+                    <div>
+                      <h4 data-i18n="card3_h3"></h4>
+                      <p data-i18n="card3_p"></p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -341,38 +346,18 @@
             <h2 data-i18n="how_h2"></h2>
             <p class="intro" data-i18n="how_intro"></p>
 
-            <div class="steps">
-              <div class="step">
-                <div class="step-header">
-                  <div class="step-num">1</div>
-                  <h3 data-i18n="step1_h3"></h3>
-                </div>
-                <p data-i18n="step1_p"></p>
+            <div class="registry-focus">
+              <div class="registry-focus-copy">
+                <div class="eyebrow" data-i18n="registry_focus_title"></div>
+                <p data-i18n="registry_focus_body"></p>
               </div>
-              <div class="step">
-                <div class="step-header">
-                  <div class="step-num">2</div>
-                  <h3 data-i18n="step2_h3"></h3>
-                </div>
-                <p data-i18n="step2_p"></p>
-              </div>
-              <div class="step">
-                <div class="step-header">
-                  <div class="step-num">3</div>
-                  <h3 data-i18n="step3_h3"></h3>
-                </div>
-                <p data-i18n="step3_p"></p>
-              </div>
-              <div class="step">
-                <div class="step-header">
-                  <div class="step-num">4</div>
-                  <h3 data-i18n="step4_h3"></h3>
-                </div>
-                <p data-i18n="step4_p"></p>
+              <div class="match-probability">
+                <strong data-i18n="match_probability_label"></strong>
+                <p data-i18n="match_probability_body"></p>
               </div>
             </div>
 
-            <!-- VISUAL PROCEDURE GUIDE: SWAB & DONATION -->
+            <!-- VISUAL PROCEDURE GUIDE: SWAB STEPS -->
             <div class="procedure-guide">
               <div class="procedure-header">
                 <div class="eyebrow" data-i18n="procedure_label">
@@ -384,88 +369,40 @@
               </div>
 
               <div class="procedure-cards">
-                <!-- CARD 1: SWAB -->
                 <div class="procedure-card">
                   <div class="procedure-media">
                     <img
-                      src="assets/images/swab-test.jpg"
-                      alt="Painless cheek swab procedure illustration"
+                      src="assets/images/swab1.png"
+                      alt="Step one of the cheek swab procedure"
                       class="procedure-img"
                       loading="lazy"
                     />
-                    <span class="procedure-badge" data-i18n="proc1_badge"
-                      ></span
-                    >
                   </div>
-                  <div class="procedure-body">
-                    <h4 data-i18n="proc1_title">
-                    </h4>
-                    <p data-i18n="proc1_desc">
-                    </p>
-                    <ul class="procedure-checklist">
-                      <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        <span data-i18n="proc1_point1"
-                          ></span
-                        >
-                      </li>
-                      <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        <span data-i18n="proc1_point2"
-                          ></span
-                        >
-                      </li>
-                      <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        <span data-i18n="proc1_point3"
-                          ></span
-                        >
-                      </li>
-                    </ul>
-                  </div>
+                  <h4 class="procedure-step-name" data-i18n="swab_step1"></h4>
                 </div>
 
-                <!-- CARD 2: DONATION / EXTRACTION -->
                 <div class="procedure-card">
                   <div class="procedure-media">
                     <img
-                      src="assets/images/donation-process.jpg"
-                      alt="Comfortable non-surgical stem cell donation illustration"
+                      src="assets/images/swab2.png"
+                      alt="Step two of the cheek swab procedure"
                       class="procedure-img"
                       loading="lazy"
                     />
-                    <span
-                      class="procedure-badge procedure-badge-donation"
-                      data-i18n="proc2_badge"
-                      ></span
-                    >
                   </div>
-                  <div class="procedure-body">
-                    <h4 data-i18n="proc2_title">
-                    </h4>
-                    <p data-i18n="proc2_desc">
-                    </p>
-                    <ul class="procedure-checklist">
-                      <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        <span data-i18n="proc2_point1"
-                          ></span
-                        >
-                      </li>
-                      <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        <span data-i18n="proc2_point2"
-                          ></span
-                        >
-                      </li>
-                      <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        <span data-i18n="proc2_point3"
-                          ></span
-                        >
-                      </li>
-                    </ul>
+                  <h4 class="procedure-step-name" data-i18n="swab_step2"></h4>
+                </div>
+
+                <div class="procedure-card">
+                  <div class="procedure-media">
+                    <img
+                      src="assets/images/swab3.png"
+                      alt="Step three of the cheek swab procedure"
+                      class="procedure-img"
+                      loading="lazy"
+                    />
                   </div>
+                  <h4 class="procedure-step-name" data-i18n="swab_step3"></h4>
                 </div>
               </div>
             </div>
@@ -551,12 +488,11 @@
             <p data-i18n="cta_p"></p>
             <div class="final-actions">
               <a
-                href="#"
+                href="https://forms.gle/31Vgob6qD67SqmXq5"
                 class="btn btn-primary"
                 id="registryButton"
                 data-i18n="cta_button"
               ></a>
-              <a href="#faq" class="btn btn-outline" data-i18n="cta_link"></a>
             </div>
           </div>
         </section>

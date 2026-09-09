@@ -689,6 +689,56 @@ h2 {
   line-height: 1.65;
 }
 
+.explainer-points {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.explainer-point {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: start;
+  gap: 12px;
+}
+
+.explainer-point .card-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.explainer-point .card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.explainer-point:nth-child(2) .card-icon {
+  background: var(--ochre-light);
+  color: var(--ochre);
+}
+
+.explainer-point:nth-child(3) .card-icon {
+  background: var(--clay-light);
+  color: var(--clay);
+}
+
+.explainer-point h4 {
+  margin: 1px 0 2px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.explainer-point p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -785,6 +835,52 @@ h2 {
   font-size: 15px;
 }
 
+.registry-focus {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 24px;
+  align-items: stretch;
+  margin: 34px auto 0;
+  max-width: 960px;
+  padding: 24px;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sage);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.registry-focus-copy {
+  padding-right: 24px;
+  border-right: 1px solid var(--line);
+}
+
+.registry-focus-copy .eyebrow {
+  margin-bottom: 8px;
+}
+
+.registry-focus p,
+.match-probability p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.match-probability {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.match-probability strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--clay);
+  font-size: 15px;
+}
+
 /* PROCEDURE VISUAL GUIDE */
 .procedure-guide {
   margin-top: 50px;
@@ -804,11 +900,11 @@ h2 {
 
 .procedure-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 .procedure-card {
@@ -823,6 +919,9 @@ h2 {
 
 .procedure-media {
   position: relative;
+  display: grid;
+  place-items: center;
+  padding: 10px;
   background: #fdfaf6;
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -831,13 +930,24 @@ h2 {
 .procedure-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  border-radius: calc(var(--radius) - 8px);
   transition: transform 0.4s ease;
 }
 
 .procedure-card:hover .procedure-img {
-  transform: scale(1.02);
+  transform: scale(1.03);
+}
+
+.procedure-step-name {
+  min-height: 3.2em;
+  display: grid;
+  place-items: center;
+  padding: 14px 16px 16px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.35;
 }
 
 .procedure-badge {
@@ -1414,6 +1524,17 @@ footer {
 
   .steps {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .registry-focus {
+    grid-template-columns: 1fr;
+  }
+
+  .registry-focus-copy {
+    padding-right: 0;
+    padding-bottom: 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .safety-list {
