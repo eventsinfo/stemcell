@@ -51,12 +51,27 @@ body.lang-en {
 }
 
 .match-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
   min-height: 100svh;
   display: grid;
   place-items: center;
   align-content: center;
   gap: 16px;
   background: var(--beige);
+}
+
+.match-loader-logo {
+  width: min(200px, 56vw);
+  max-width: 200px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.match-loader.is-exiting .match-loader-logo {
+  animation: loader-logo-out 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .match-loader-ring {
@@ -99,12 +114,33 @@ body.lang-en {
   }
 }
 
+@keyframes loader-logo-out {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.12) translateY(-14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .match-loader.is-exiting .match-loader-logo {
+    animation-duration: 0.01ms;
+  }
+}
+
 body:not(.is-loading) .match-loader {
   display: none;
 }
 
-body.is-loading #app-content {
-  display: none;
+body.is-loading {
+  overflow: hidden;
+}
+
+body.is-loading > :not(.match-loader) {
+  visibility: hidden;
 }
 
 a {
@@ -119,6 +155,18 @@ svg {
 
 .icon-sprite {
   position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.card-icon svg,
+.drive-meta-icon svg,
+.btn-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .container {
@@ -146,12 +194,18 @@ svg {
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 9px;
-  font-weight: 800;
-  color: var(--ink);
-  font-size: 15px;
+  justify-content: center;
+  min-height: 42px;
+}
+
+.brand-logo {
+  display: block;
+  max-height: 48px;
+  width: auto;
+  max-width: min(220px, 54vw);
+  object-fit: contain;
 }
 
 .brand-mark {
@@ -905,15 +959,48 @@ h2 {
   margin-bottom: 12px;
 }
 
-.drive-appeal-tag {
-  background: var(--clay);
-  color: #ffffff;
-  font-size: 11px;
+.drive-countdown {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--clay);
+}
+
+.drive-countdown-label {
+  font-size: 12px;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 3px 10px;
-  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.countdown-units {
+  display: flex;
+  gap: 6px;
+}
+
+.countdown-unit {
+  min-width: 48px;
+  padding: 5px 6px 4px;
+  border: 1px solid var(--clay-light);
+  border-radius: 8px;
+  background: var(--clay-light);
+  text-align: center;
+}
+
+.countdown-unit strong,
+.countdown-unit span {
+  display: block;
+}
+
+.countdown-unit strong {
+  font-size: 17px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-unit span {
+  margin-top: 2px;
+  font-size: 9px;
+  color: var(--muted);
 }
 
 .drive-org-badge {
@@ -1063,6 +1150,16 @@ h2 {
   gap: 16px;
   padding-top: 28px;
   flex-wrap: wrap;
+}
+
+.drive-register-action {
+  display: flex;
+  justify-content: center;
+  padding-top: 28px;
+}
+
+.drive-register-action .btn {
+  min-width: min(100%, 280px);
 }
 
 .drive-actions .btn {
@@ -1381,6 +1478,25 @@ footer {
 
   .drive-main-card {
     padding: 24px 18px;
+  }
+
+  .drive-appeal-header {
+    align-items: flex-start;
+  }
+
+  .drive-countdown {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .countdown-units {
+    gap: 4px;
+  }
+
+  .countdown-unit {
+    min-width: 44px;
+    padding-inline: 4px;
   }
 
   .footer-inner {

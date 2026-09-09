@@ -1,5 +1,52 @@
 const translationsUrl = new URL("data/translations.json", document.baseURI).href;
 
+history.scrollRestoration = "manual";
+const navigationEntry = performance.getEntriesByType("navigation")[0];
+if (navigationEntry?.type === "reload") {
+  if (window.location.hash) {
+    window.history.replaceState(null, document.title, `${window.location.pathname}${window.location.search}`);
+  }
+  window.scrollTo(0, 0);
+}
+
+function waitForPageAssets() {
+  document.querySelectorAll("img").forEach(image => {
+    image.loading = "eager";
+  });
+
+  const imagePromises = Array.from(document.images).map(image => {
+    if (image.complete) return image.decode ? image.decode().catch(() => {}) : Promise.resolve();
+
+    return new Promise(resolve => {
+      image.addEventListener("load", resolve, { once: true });
+      image.addEventListener("error", resolve, { once: true });
+    }).then(() => (image.decode ? image.decode().catch(() => {}) : undefined));
+  });
+
+  return Promise.all([
+    document.fonts ? document.fonts.ready : Promise.resolve(),
+    ...imagePromises
+  ]);
+}
+
+function finishLoading() {
+  const loader = document.querySelector(".match-loader");
+
+  return new Promise(resolve => {
+    let finished = false;
+    const complete = () => {
+      if (finished) return;
+      finished = true;
+      document.body.classList.remove("is-loading");
+      resolve();
+    };
+
+    loader.classList.add("is-exiting");
+    loader.addEventListener("animationend", complete, { once: true });
+    window.setTimeout(complete, 700);
+  });
+}
+
 function applyLanguage(lang, translations) {
   const dict = translations[lang] || translations.ml;
 
@@ -33,9 +80,8 @@ async function init() {
   }
 
   applyLanguage(savedLanguage, translations);
-
-  document.body.classList.remove("is-loading");
-  document.getElementById("app-content").hidden = false;
+  await waitForPageAssets();
+  await finishLoading();
 
   document.querySelectorAll(".lang-btn").forEach(button => {
     button.addEventListener("click", () => {
@@ -64,6 +110,37 @@ if (calendarBtn) {
     window.location.assign(calendarUrl.href);
   });
 }
+
+const countdownTarget = Date.UTC(2026, 8, 27, 3, 30, 0);
+const countdownElements = {
+  days: document.getElementById("countdownDays"),
+  hours: document.getElementById("countdownHours"),
+  minutes: document.getElementById("countdownMinutes"),
+  seconds: document.getElementById("countdownSeconds")
+};
+
+function updateCountdown() {
+  const remaining = Math.max(0, countdownTarget - Date.now());
+  const totalSeconds = Math.floor(remaining / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  countdownElements.days.textContent = String(days).padStart(2, "0");
+  countdownElements.hours.textContent = String(hours).padStart(2, "0");
+  countdownElements.minutes.textContent = String(minutes).padStart(2, "0");
+  countdownElements.seconds.textContent = String(seconds).padStart(2, "0");
+
+  if (remaining === 0) {
+    document.querySelector(".drive-countdown-label").textContent =
+      document.documentElement.lang === "en" ? "Event started" : "ക്യാമ്പ് ആരംഭിച്ചു";
+    window.clearInterval(countdownTimer);
+  }
+}
+
+const countdownTimer = window.setInterval(updateCountdown, 1000);
+updateCountdown();
 
 function setFaqState(item, isOpen) {
   item.classList.toggle("is-open", isOpen);
